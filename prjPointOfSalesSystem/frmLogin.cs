@@ -21,6 +21,7 @@ namespace prjPointOfSalesSystem
             thread.Start();
             Thread.Sleep(5000);
             thread.Abort();
+            this.Focus();
 
         }
 
@@ -55,11 +56,14 @@ namespace prjPointOfSalesSystem
             String username = "Jayson";
             String Password = "deleon";
             bool CorrectLogin = ((usernameValue.Text == "jayson") && (passwordValue.Text == "deleon"));
-            bool IsEmpty = ((usernameValue.Text == "") || (passwordValue.Text == " " ));
-            
+            bool IsEmpty = ((usernameValue.Text == String.Empty) || (passwordValue.Text == String.Empty ));
+
+
             if (IsEmpty){
 
-                MessageBox.Show("Username or Password is Empty","Warning",MessageBoxButtons.OK,MessageBoxIcon.Warning);
+                warning.Text = "Empty";
+                errorProvider1.SetError(warning,"Empty Value");
+                
 
             } else {
 

@@ -16,11 +16,20 @@ namespace prjPointOfSalesSystem
         {
             InitializeComponent();
             
+            
         }
 
-        private void logoutToolStripMenuItem_Click(object sender, EventArgs e)
+        private void CallModule(Form form) {
+
+            Application.Run(form);
+
+        }
+
+
+        private void logoutToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show("Do you want to logout","Warnning",MessageBoxButtons.YesNo,MessageBoxIcon.Warning);
+
+            DialogResult result = MessageBox.Show("Do you want to logout", "Warnning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
             if (DialogResult.Yes == result)
                 this.Close();
 

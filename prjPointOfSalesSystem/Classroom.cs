@@ -10,12 +10,11 @@ using System.Windows.Forms;
 
 namespace prjPointOfSalesSystem
 {
-    public partial class frmSplashScreen : Form
+    public partial class Classroom : Form
     {
-        public frmSplashScreen()
+        public Classroom()
         {
             InitializeComponent();
-
         }
     }
 }

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLogin));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.usernameLabel = new System.Windows.Forms.Label();
@@ -36,7 +37,10 @@
             this.passwordValue = new System.Windows.Forms.TextBox();
             this.Login = new System.Windows.Forms.Button();
             this.Cancel = new System.Windows.Forms.Button();
+            this.warning = new System.Windows.Forms.Label();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -53,7 +57,7 @@
             // usernameLabel
             // 
             this.usernameLabel.AutoSize = true;
-            this.usernameLabel.Location = new System.Drawing.Point(56, 206);
+            this.usernameLabel.Location = new System.Drawing.Point(56, 226);
             this.usernameLabel.Margin = new System.Windows.Forms.Padding(10);
             this.usernameLabel.Name = "usernameLabel";
             this.usernameLabel.Padding = new System.Windows.Forms.Padding(5);
@@ -64,7 +68,7 @@
             // passwordLabel
             // 
             this.passwordLabel.AutoSize = true;
-            this.passwordLabel.Location = new System.Drawing.Point(56, 274);
+            this.passwordLabel.Location = new System.Drawing.Point(56, 294);
             this.passwordLabel.Margin = new System.Windows.Forms.Padding(10);
             this.passwordLabel.Name = "passwordLabel";
             this.passwordLabel.Padding = new System.Windows.Forms.Padding(5);
@@ -74,7 +78,7 @@
             // 
             // usernameValue
             // 
-            this.usernameValue.Location = new System.Drawing.Point(208, 209);
+            this.usernameValue.Location = new System.Drawing.Point(208, 229);
             this.usernameValue.Margin = new System.Windows.Forms.Padding(10);
             this.usernameValue.Name = "usernameValue";
             this.usernameValue.Size = new System.Drawing.Size(160, 27);
@@ -82,7 +86,7 @@
             // 
             // passwordValue
             // 
-            this.passwordValue.Location = new System.Drawing.Point(208, 277);
+            this.passwordValue.Location = new System.Drawing.Point(208, 297);
             this.passwordValue.Margin = new System.Windows.Forms.Padding(10);
             this.passwordValue.Name = "passwordValue";
             this.passwordValue.PasswordChar = '*';
@@ -115,12 +119,26 @@
             this.Cancel.UseVisualStyleBackColor = true;
             this.Cancel.Click += new System.EventHandler(this.Cancel_Click);
             // 
+            // warning
+            // 
+            this.warning.AutoSize = true;
+            this.warning.ForeColor = System.Drawing.Color.Red;
+            this.warning.Location = new System.Drawing.Point(208, 203);
+            this.warning.Name = "warning";
+            this.warning.Size = new System.Drawing.Size(0, 20);
+            this.warning.TabIndex = 7;
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // frmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(411, 450);
+            this.Controls.Add(this.warning);
             this.Controls.Add(this.Cancel);
             this.Controls.Add(this.Login);
             this.Controls.Add(this.passwordValue);
@@ -137,6 +155,7 @@
             this.Text = "SplashScreen";
             this.Load += new System.EventHandler(this.frmLogin_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -151,6 +170,8 @@
         private System.Windows.Forms.TextBox passwordValue;
         private System.Windows.Forms.Button Login;
         private System.Windows.Forms.Button Cancel;
+        private System.Windows.Forms.Label warning;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }
 
