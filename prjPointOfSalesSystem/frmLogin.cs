@@ -17,6 +17,9 @@ namespace prjPointOfSalesSystem
         public frmLogin()
         {
             InitializeComponent();
+
+            //this will call the splash screen after cal that
+            //this form will apppear
             Thread thread = new Thread(new ThreadStart(CallScreenSplash));
             thread.Start();
             Thread.Sleep(5000);
@@ -28,23 +31,21 @@ namespace prjPointOfSalesSystem
 
         private void Cancel_Click(object sender, EventArgs e) {
 
+            //prompt the user if its want to exit
             DialogResult result = MessageBox.Show("Do you want to Cancel","Alert",MessageBoxButtons.OKCancel,MessageBoxIcon.Warning);
 
             if(DialogResult.OK == result)
-            this.Close();
+              this.Close();
 
         }
 
-        private void CallScreenSplash() {
+        //run the splash screen ui 
+        private void CallScreenSplash() => Application.Run(new frmSplashScreen());
 
-            Application.Run(new frmSplashScreen());
-        
-        }
 
-        private void CallDashboard(){
+        //run the dashboard ui
+        private void CallDashboard() => Application.Run(new Dashboard());
 
-            Application.Run(new Dashboard());
-        }
 
         private void frmLogin_Load(object sender, EventArgs e)
         {
@@ -53,12 +54,17 @@ namespace prjPointOfSalesSystem
 
         private void Login_Click(object sender, EventArgs e)
         {
-            String username = "Jayson";
-            String Password = "deleon";
+
+
+
+            //check the if the username and password are correct
             bool CorrectLogin = ((usernameValue.Text == "jayson") && (passwordValue.Text == "deleon"));
+
+            //check if the texbox is empty
             bool IsEmpty = ((usernameValue.Text == String.Empty) || (passwordValue.Text == String.Empty ));
 
-
+            //check if the condition meet for logging in if not
+            //handle the error
             if (IsEmpty){
 
                 warning.Text = "Empty";
@@ -71,13 +77,17 @@ namespace prjPointOfSalesSystem
                 if (CorrectLogin)
                 {
 
+                    //run the dashboard ui
                     Thread thread = new Thread(new ThreadStart(CallDashboard));
                     thread.Start();
+
+                    //close this form
                     this.Close();
 
                 }
                 else {
 
+                    //prompt the user of a incorrect crediential then clear textbox
                     MessageBox.Show("Incorrect Username or Password","Warning",MessageBoxButtons.OKCancel,MessageBoxIcon.Warning);
                     usernameValue.Clear();
                     passwordValue.Clear();

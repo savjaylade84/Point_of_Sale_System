@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -19,20 +20,22 @@ namespace prjPointOfSalesSystem
             
         }
 
-        private void CallModule(Form form) {
+        private void EditAccountToolStripMenuItem_Click(object sender, EventArgs e)
+        {
 
-            Application.Run(form);
+            //call the user account
+            frmUser user = new frmUser();
+            user.MdiParent = this;
+            user.Show();
 
         }
 
-
-        private void logoutToolStripMenuItem1_Click(object sender, EventArgs e)
+        private void LogoutToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            //check if the user want to exit 
             DialogResult result = MessageBox.Show("Do you want to logout", "Warnning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
             if (DialogResult.Yes == result)
                 this.Close();
-
         }
     }
 }

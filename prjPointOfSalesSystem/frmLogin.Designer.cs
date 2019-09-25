@@ -61,7 +61,7 @@
             this.usernameLabel.Margin = new System.Windows.Forms.Padding(10);
             this.usernameLabel.Name = "usernameLabel";
             this.usernameLabel.Padding = new System.Windows.Forms.Padding(5);
-            this.usernameLabel.Size = new System.Drawing.Size(88, 30);
+            this.usernameLabel.Size = new System.Drawing.Size(108, 35);
             this.usernameLabel.TabIndex = 1;
             this.usernameLabel.Text = "Username";
             // 
@@ -72,7 +72,7 @@
             this.passwordLabel.Margin = new System.Windows.Forms.Padding(10);
             this.passwordLabel.Name = "passwordLabel";
             this.passwordLabel.Padding = new System.Windows.Forms.Padding(5);
-            this.passwordLabel.Size = new System.Drawing.Size(83, 30);
+            this.passwordLabel.Size = new System.Drawing.Size(101, 35);
             this.passwordLabel.TabIndex = 2;
             this.passwordLabel.Text = "Password";
             // 
@@ -81,7 +81,7 @@
             this.usernameValue.Location = new System.Drawing.Point(208, 229);
             this.usernameValue.Margin = new System.Windows.Forms.Padding(10);
             this.usernameValue.Name = "usernameValue";
-            this.usernameValue.Size = new System.Drawing.Size(160, 27);
+            this.usernameValue.Size = new System.Drawing.Size(160, 32);
             this.usernameValue.TabIndex = 3;
             // 
             // passwordValue
@@ -91,7 +91,7 @@
             this.passwordValue.Name = "passwordValue";
             this.passwordValue.PasswordChar = '*';
             this.passwordValue.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.passwordValue.Size = new System.Drawing.Size(160, 27);
+            this.passwordValue.Size = new System.Drawing.Size(160, 32);
             this.passwordValue.TabIndex = 4;
             this.passwordValue.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -125,7 +125,7 @@
             this.warning.ForeColor = System.Drawing.Color.Red;
             this.warning.Location = new System.Drawing.Point(208, 203);
             this.warning.Name = "warning";
-            this.warning.Size = new System.Drawing.Size(0, 20);
+            this.warning.Size = new System.Drawing.Size(0, 25);
             this.warning.TabIndex = 7;
             // 
             // errorProvider1
@@ -134,7 +134,7 @@
             // 
             // frmLogin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(411, 450);
