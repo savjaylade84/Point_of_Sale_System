@@ -16,9 +16,12 @@ namespace prjPointOfSalesSystem
         public Dashboard()
         {
             InitializeComponent();
-            
-            
+
+            //add username to the menulogout
+            menuLogout.Text += " " + DashboardStorage.name;
+
         }
+
 
         private void EditAccountToolStripMenuItem_Click(object sender, EventArgs e)
         {

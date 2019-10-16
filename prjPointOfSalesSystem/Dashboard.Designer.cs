@@ -34,7 +34,6 @@
             this.accountToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.editAccountToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.settingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.logoutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.classroomToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.attendanceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.accountToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -42,6 +41,7 @@
             this.serttingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.logoutToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutUsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuLogout = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -51,10 +51,11 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.classroomToolStripMenuItem1,
             this.attendanceToolStripMenuItem1,
-            this.accountToolStripMenuItem1});
+            this.accountToolStripMenuItem1,
+            this.menuLogout});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1827, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(1827, 30);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -82,24 +83,15 @@
             // editAccountToolStripMenuItem1
             // 
             this.editAccountToolStripMenuItem1.Name = "editAccountToolStripMenuItem1";
-            this.editAccountToolStripMenuItem1.Size = new System.Drawing.Size(184, 26);
+            this.editAccountToolStripMenuItem1.Size = new System.Drawing.Size(224, 26);
             this.editAccountToolStripMenuItem1.Text = "Edit  Account ";
             this.editAccountToolStripMenuItem1.Click += new System.EventHandler(this.EditAccountToolStripMenuItem_Click);
             // 
             // settingToolStripMenuItem
             // 
-            this.settingToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.logoutToolStripMenuItem});
             this.settingToolStripMenuItem.Name = "settingToolStripMenuItem";
-            this.settingToolStripMenuItem.Size = new System.Drawing.Size(184, 26);
+            this.settingToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.settingToolStripMenuItem.Text = "Setting";
-            // 
-            // logoutToolStripMenuItem
-            // 
-            this.logoutToolStripMenuItem.Name = "logoutToolStripMenuItem";
-            this.logoutToolStripMenuItem.Size = new System.Drawing.Size(139, 26);
-            this.logoutToolStripMenuItem.Text = "Logout";
-            this.logoutToolStripMenuItem.Click += new System.EventHandler(this.LogoutToolStripMenuItem_Click);
             // 
             // classroomToolStripMenuItem
             // 
@@ -146,6 +138,13 @@
             this.aboutUsToolStripMenuItem.Size = new System.Drawing.Size(84, 24);
             this.aboutUsToolStripMenuItem.Text = "About Us";
             // 
+            // menuLogout
+            // 
+            this.menuLogout.Name = "menuLogout";
+            this.menuLogout.Size = new System.Drawing.Size(70, 26);
+            this.menuLogout.Text = "Logout";
+            this.menuLogout.Click += new System.EventHandler(this.LogoutToolStripMenuItem_Click);
+            // 
             // Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -181,6 +180,6 @@
         private System.Windows.Forms.ToolStripMenuItem accountToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem editAccountToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem settingToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem logoutToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem menuLogout;
     }
 }

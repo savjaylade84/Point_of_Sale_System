@@ -1,19 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Threading;
-using System.Threading.Tasks;
+
 namespace prjPointOfSalesSystem
 {
     public partial class frmLogin : Form
     {
-
         public frmLogin()
         {
             InitializeComponent();
@@ -42,7 +34,10 @@ namespace prjPointOfSalesSystem
         //run the splash screen ui 
         private void CallScreenSplash() => Application.Run(new frmSplashScreen());
 
+        private void Dashboard()
+        {
 
+        }
         //run the dashboard ui
         private void CallDashboard() => Application.Run(new Dashboard());
 
@@ -55,13 +50,14 @@ namespace prjPointOfSalesSystem
         private void Login_Click(object sender, EventArgs e)
         {
 
-
+            string username = "jayson", password = "deleon";
 
             //check the if the username and password are correct
-            bool CorrectLogin = ((usernameValue.Text == "jayson") && (passwordValue.Text == "deleon"));
+            bool CorrectLogin = ((usernameValue.Text == username) && (passwordValue.Text == password));
 
             //check if the texbox is empty
             bool IsEmpty = ((usernameValue.Text == String.Empty) || (passwordValue.Text == String.Empty ));
+
 
             //check if the condition meet for logging in if not
             //handle the error
@@ -76,6 +72,10 @@ namespace prjPointOfSalesSystem
 
                 if (CorrectLogin)
                 {
+
+                    //send username of a account to 
+                    //temporary holder
+                    DashboardStorage.name = username;
 
                     //run the dashboard ui
                     Thread thread = new Thread(new ThreadStart(CallDashboard));
