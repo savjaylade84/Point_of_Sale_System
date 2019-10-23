@@ -34,10 +34,6 @@ namespace prjPointOfSalesSystem
         //run the splash screen ui 
         private void CallScreenSplash() => Application.Run(new frmSplashScreen());
 
-        private void Dashboard()
-        {
-
-        }
         //run the dashboard ui
         private void CallDashboard() => Application.Run(new Dashboard());
 

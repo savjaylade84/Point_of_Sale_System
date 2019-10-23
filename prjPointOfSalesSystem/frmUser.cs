@@ -16,8 +16,7 @@ namespace prjPointOfSalesSystem
         public frmUser()
         {
             InitializeComponent();
-            PasswordValue.UseSystemPasswordChar = true;
-            ConfirmPasswordValue.UseSystemPasswordChar = true;
+
         }
 
         private void SubmitBtn_Click(object sender, EventArgs e)
@@ -25,58 +24,77 @@ namespace prjPointOfSalesSystem
 
             UserStorage userStorage = new UserStorage();
             //check if the user want to exit 
-            DialogResult result = MessageBox.Show("Do you want to submit?", "Warnning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            DialogResult result = MessageBox.Show("Do you want to create?", "Warnning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
             if (DialogResult.Yes == result) {
 
+                //inserted the value to user storage
                 userStorage.user_id = UserIdValue.Text;
                 userStorage.username = UsernameValue.Text;
                 userStorage.password = PasswordValue.Text;
-                //it just temporary
-                MessageBox.Show("Name:\n" + userStorage.username);
+                userStorage.firstname = FirstNameValue.Text;
+                userStorage.lastname = LastNameValue.Text;
+                userStorage.email = EmailValue.Text;
+                userStorage.contactNO = ContactValue.Text;
 
+                //show the user inserted value
+                InfoAlert.Text = "\nUsername   : " + userStorage.username +
+                                 "\nUser ID    : " + userStorage.user_id +
+                                 "\nPassword   : " + userStorage.password +
+                                 "\nFirst Name : " + userStorage.firstname +
+                                 "\nLast Name  : " + userStorage.lastname +
+                                 "\nEmail      : " + userStorage.email +
+                                 "\nContact No : " + userStorage.contactNO;
             }
                 
 
         }
 
-        //modify
+        //to let password have asterisk or dot value show    
+        private void FocusAndClearTextbox(TextBox change) {
+
+            change.Focus();
+            change.Clear();
+        
+        }
+
+        //to point the active texbox control and
+        //clear the value of it
         private void FocusTextbox(object sender, EventArgs e)
         {
-            TextBox[] textBoxes = { UserIdValue, UsernameValue, PasswordValue, ConfirmPasswordValue };
+            //capture the active texbox control 
+            TextBox a = (TextBox)sender;
 
-            foreach (TextBox textBox in textBoxes) {
+            //check if the not password or confirm password
+            if (a != PasswordValue || a != ConfirmPasswordValue)
+                FocusAndClearTextbox(a);
 
-                if ((TextBox)sender == textBox)
-                {
-
-                    textBox.Focus();
-                    textBox.Clear();
-
-                }
-
-            }
+            FocusAndClearTextbox(a);
+            PasswordValue.UseSystemPasswordChar = true;
+            ConfirmPasswordValue.UseSystemPasswordChar = true;
 
         }
 
         //modify
         private void UnFocusTextBox(Object sender, EventArgs e) {
 
-            TextBox[] textBoxes = { UserIdValue, UsernameValue, PasswordValue, ConfirmPasswordValue };
+            //TextBox[] textBoxes = { UserIdValue, UsernameValue, PasswordValue, ConfirmPasswordValue };
 
-            foreach (TextBox textBox in textBoxes)
-            {
+            //foreach (TextBox textBox in textBoxes)
+            //{
 
-                if ((TextBox)sender == textBox)
-                {
+            //    if ((TextBox)sender == textBox)
+            //    {
 
-                    textBox.Text = textBox.Tag.ToString();
+            //        textBox.Text = textBox.Tag.ToString();
 
-                }
+            //    }
 
-            }
+            //}
 
         }
 
+        //support in changing the appearance of the value
+        //in the password
         public void ShowHidePassword(bool YesNo) {
 
 
@@ -87,6 +105,7 @@ namespace prjPointOfSalesSystem
 
         private void ShowHidePassword(object sender, EventArgs e)
         {
+             //show or not the password real value
             if (ShowPasswordChckBx.Checked)
             {
 
@@ -102,5 +121,9 @@ namespace prjPointOfSalesSystem
             }
 
         }
+
+        //exit this form
+        private void ExitForm(object sender, EventArgs e) => this.Close();
+ 
     }
 }

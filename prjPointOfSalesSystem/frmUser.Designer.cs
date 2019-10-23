@@ -35,12 +35,18 @@
             this.ProfilePic = new System.Windows.Forms.PictureBox();
             this.SubmitBtn = new System.Windows.Forms.Button();
             this.ShowPasswordChckBx = new System.Windows.Forms.CheckBox();
+            this.InfoAlert = new System.Windows.Forms.Label();
+            this.LastNameValue = new System.Windows.Forms.TextBox();
+            this.FirstNameValue = new System.Windows.Forms.TextBox();
+            this.ContactValue = new System.Windows.Forms.TextBox();
+            this.EmailValue = new System.Windows.Forms.TextBox();
+            this.CancelBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.ProfilePic)).BeginInit();
             this.SuspendLayout();
             // 
             // UserIdValue
             // 
-            this.UserIdValue.Location = new System.Drawing.Point(76, 305);
+            this.UserIdValue.Location = new System.Drawing.Point(17, 252);
             this.UserIdValue.Margin = new System.Windows.Forms.Padding(15);
             this.UserIdValue.Name = "UserIdValue";
             this.UserIdValue.Size = new System.Drawing.Size(293, 34);
@@ -51,7 +57,7 @@
             // 
             // PasswordValue
             // 
-            this.PasswordValue.Location = new System.Drawing.Point(76, 433);
+            this.PasswordValue.Location = new System.Drawing.Point(17, 380);
             this.PasswordValue.Margin = new System.Windows.Forms.Padding(15);
             this.PasswordValue.Name = "PasswordValue";
             this.PasswordValue.Size = new System.Drawing.Size(293, 34);
@@ -62,7 +68,7 @@
             // 
             // ConfirmPasswordValue
             // 
-            this.ConfirmPasswordValue.Location = new System.Drawing.Point(76, 497);
+            this.ConfirmPasswordValue.Location = new System.Drawing.Point(17, 444);
             this.ConfirmPasswordValue.Margin = new System.Windows.Forms.Padding(15);
             this.ConfirmPasswordValue.Name = "ConfirmPasswordValue";
             this.ConfirmPasswordValue.Size = new System.Drawing.Size(293, 34);
@@ -73,7 +79,7 @@
             // 
             // UsernameValue
             // 
-            this.UsernameValue.Location = new System.Drawing.Point(76, 369);
+            this.UsernameValue.Location = new System.Drawing.Point(17, 316);
             this.UsernameValue.Margin = new System.Windows.Forms.Padding(15);
             this.UsernameValue.Name = "UsernameValue";
             this.UsernameValue.Size = new System.Drawing.Size(293, 34);
@@ -85,7 +91,7 @@
             // ProfilePic
             // 
             this.ProfilePic.Image = global::prjPointOfSalesSystem.Properties.Resources.Unknown_empty;
-            this.ProfilePic.Location = new System.Drawing.Point(76, 69);
+            this.ProfilePic.Location = new System.Drawing.Point(17, 16);
             this.ProfilePic.Name = "ProfilePic";
             this.ProfilePic.Size = new System.Drawing.Size(303, 218);
             this.ProfilePic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -94,18 +100,18 @@
             // 
             // SubmitBtn
             // 
-            this.SubmitBtn.Location = new System.Drawing.Point(76, 549);
+            this.SubmitBtn.Location = new System.Drawing.Point(17, 752);
             this.SubmitBtn.Name = "SubmitBtn";
             this.SubmitBtn.Size = new System.Drawing.Size(293, 57);
             this.SubmitBtn.TabIndex = 15;
-            this.SubmitBtn.Text = "Submit";
+            this.SubmitBtn.Text = "Create";
             this.SubmitBtn.UseVisualStyleBackColor = true;
             this.SubmitBtn.Click += new System.EventHandler(this.SubmitBtn_Click);
             // 
             // ShowPasswordChckBx
             // 
             this.ShowPasswordChckBx.AutoSize = true;
-            this.ShowPasswordChckBx.Location = new System.Drawing.Point(372, 433);
+            this.ShowPasswordChckBx.Location = new System.Drawing.Point(313, 380);
             this.ShowPasswordChckBx.Name = "ShowPasswordChckBx";
             this.ShowPasswordChckBx.Size = new System.Drawing.Size(84, 32);
             this.ShowPasswordChckBx.TabIndex = 16;
@@ -113,12 +119,78 @@
             this.ShowPasswordChckBx.UseVisualStyleBackColor = true;
             this.ShowPasswordChckBx.Click += new System.EventHandler(this.ShowHidePassword);
             // 
+            // InfoAlert
+            // 
+            this.InfoAlert.AutoSize = true;
+            this.InfoAlert.Location = new System.Drawing.Point(405, 16);
+            this.InfoAlert.Name = "InfoAlert";
+            this.InfoAlert.Size = new System.Drawing.Size(0, 28);
+            this.InfoAlert.TabIndex = 17;
+            // 
+            // LastNameValue
+            // 
+            this.LastNameValue.Location = new System.Drawing.Point(17, 572);
+            this.LastNameValue.Margin = new System.Windows.Forms.Padding(15);
+            this.LastNameValue.Name = "LastNameValue";
+            this.LastNameValue.Size = new System.Drawing.Size(293, 34);
+            this.LastNameValue.TabIndex = 19;
+            this.LastNameValue.Text = "[last name:]";
+            this.LastNameValue.Click += new System.EventHandler(this.FocusTextbox);
+            // 
+            // FirstNameValue
+            // 
+            this.FirstNameValue.Location = new System.Drawing.Point(17, 508);
+            this.FirstNameValue.Margin = new System.Windows.Forms.Padding(15);
+            this.FirstNameValue.Name = "FirstNameValue";
+            this.FirstNameValue.Size = new System.Drawing.Size(293, 34);
+            this.FirstNameValue.TabIndex = 18;
+            this.FirstNameValue.Text = "[first name:]";
+            this.FirstNameValue.Click += new System.EventHandler(this.FocusTextbox);
+            // 
+            // ContactValue
+            // 
+            this.ContactValue.Location = new System.Drawing.Point(17, 700);
+            this.ContactValue.Margin = new System.Windows.Forms.Padding(15);
+            this.ContactValue.Name = "ContactValue";
+            this.ContactValue.Size = new System.Drawing.Size(293, 34);
+            this.ContactValue.TabIndex = 21;
+            this.ContactValue.Text = "[contact no.:]";
+            this.ContactValue.Click += new System.EventHandler(this.FocusTextbox);
+            // 
+            // EmailValue
+            // 
+            this.EmailValue.Location = new System.Drawing.Point(17, 636);
+            this.EmailValue.Margin = new System.Windows.Forms.Padding(15);
+            this.EmailValue.Name = "EmailValue";
+            this.EmailValue.Size = new System.Drawing.Size(293, 34);
+            this.EmailValue.TabIndex = 20;
+            this.EmailValue.Text = "[email:]";
+            this.EmailValue.Click += new System.EventHandler(this.FocusTextbox);
+            // 
+            // CancelBtn
+            // 
+            this.CancelBtn.BackColor = System.Drawing.Color.Red;
+            this.CancelBtn.Location = new System.Drawing.Point(17, 815);
+            this.CancelBtn.Name = "CancelBtn";
+            this.CancelBtn.Size = new System.Drawing.Size(293, 57);
+            this.CancelBtn.TabIndex = 22;
+            this.CancelBtn.Text = "Cancel";
+            this.CancelBtn.UseVisualStyleBackColor = false;
+            this.CancelBtn.Click += new System.EventHandler(this.ExitForm);
+            // 
             // frmUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 28F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.ClientSize = new System.Drawing.Size(496, 713);
+            this.ClientSize = new System.Drawing.Size(636, 885);
+            this.Controls.Add(this.CancelBtn);
+            this.Controls.Add(this.ContactValue);
+            this.Controls.Add(this.EmailValue);
+            this.Controls.Add(this.LastNameValue);
+            this.Controls.Add(this.FirstNameValue);
+            this.Controls.Add(this.InfoAlert);
             this.Controls.Add(this.ShowPasswordChckBx);
             this.Controls.Add(this.SubmitBtn);
             this.Controls.Add(this.ProfilePic);
@@ -145,5 +217,11 @@
         private System.Windows.Forms.PictureBox ProfilePic;
         private System.Windows.Forms.Button SubmitBtn;
         private System.Windows.Forms.CheckBox ShowPasswordChckBx;
+        private System.Windows.Forms.Label InfoAlert;
+        private System.Windows.Forms.TextBox LastNameValue;
+        private System.Windows.Forms.TextBox FirstNameValue;
+        private System.Windows.Forms.TextBox ContactValue;
+        private System.Windows.Forms.TextBox EmailValue;
+        private System.Windows.Forms.Button CancelBtn;
     }
 }

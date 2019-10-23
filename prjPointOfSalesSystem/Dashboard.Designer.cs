@@ -32,8 +32,8 @@
             this.classroomToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.attendanceToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.accountToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.editAccountToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.settingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuLogout = new System.Windows.Forms.ToolStripMenuItem();
             this.classroomToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.attendanceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.accountToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -41,7 +41,7 @@
             this.serttingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.logoutToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutUsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuLogout = new System.Windows.Forms.ToolStripMenuItem();
+            this.registrationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -52,10 +52,11 @@
             this.classroomToolStripMenuItem1,
             this.attendanceToolStripMenuItem1,
             this.accountToolStripMenuItem1,
-            this.menuLogout});
+            this.menuLogout,
+            this.registrationToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1827, 30);
+            this.menuStrip1.Size = new System.Drawing.Size(1827, 28);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -74,24 +75,23 @@
             // accountToolStripMenuItem1
             // 
             this.accountToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.editAccountToolStripMenuItem1,
             this.settingToolStripMenuItem});
             this.accountToolStripMenuItem1.Name = "accountToolStripMenuItem1";
             this.accountToolStripMenuItem1.Size = new System.Drawing.Size(77, 24);
             this.accountToolStripMenuItem1.Text = "Account";
-            // 
-            // editAccountToolStripMenuItem1
-            // 
-            this.editAccountToolStripMenuItem1.Name = "editAccountToolStripMenuItem1";
-            this.editAccountToolStripMenuItem1.Size = new System.Drawing.Size(224, 26);
-            this.editAccountToolStripMenuItem1.Text = "Edit  Account ";
-            this.editAccountToolStripMenuItem1.Click += new System.EventHandler(this.EditAccountToolStripMenuItem_Click);
             // 
             // settingToolStripMenuItem
             // 
             this.settingToolStripMenuItem.Name = "settingToolStripMenuItem";
             this.settingToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.settingToolStripMenuItem.Text = "Setting";
+            // 
+            // menuLogout
+            // 
+            this.menuLogout.Name = "menuLogout";
+            this.menuLogout.Size = new System.Drawing.Size(70, 24);
+            this.menuLogout.Text = "Logout";
+            this.menuLogout.Click += new System.EventHandler(this.LogoutToolStripMenuItem_Click);
             // 
             // classroomToolStripMenuItem
             // 
@@ -138,12 +138,12 @@
             this.aboutUsToolStripMenuItem.Size = new System.Drawing.Size(84, 24);
             this.aboutUsToolStripMenuItem.Text = "About Us";
             // 
-            // menuLogout
+            // registrationToolStripMenuItem
             // 
-            this.menuLogout.Name = "menuLogout";
-            this.menuLogout.Size = new System.Drawing.Size(70, 26);
-            this.menuLogout.Text = "Logout";
-            this.menuLogout.Click += new System.EventHandler(this.LogoutToolStripMenuItem_Click);
+            this.registrationToolStripMenuItem.Name = "registrationToolStripMenuItem";
+            this.registrationToolStripMenuItem.Size = new System.Drawing.Size(103, 24);
+            this.registrationToolStripMenuItem.Text = "Registration";
+            this.registrationToolStripMenuItem.Click += new System.EventHandler(this.EditAccountToolStripMenuItem_Click);
             // 
             // Dashboard
             // 
@@ -178,8 +178,8 @@
         private System.Windows.Forms.ToolStripMenuItem classroomToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem attendanceToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem accountToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem editAccountToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem settingToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem menuLogout;
+        private System.Windows.Forms.ToolStripMenuItem registrationToolStripMenuItem;
     }
 }
