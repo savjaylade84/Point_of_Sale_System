@@ -33,6 +33,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -44,12 +45,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Account.cs" />
     <Compile Include="Classroom.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Classroom.Designer.cs">
       <DependentUpon>Classroom.cs</DependentUpon>
     </Compile>
+    <Compile Include="ClearControl.cs" />
+    <Compile Include="ConnectionSting.cs" />
+    <Compile Include="ConnectionString.cs" />
     <Compile Include="Dashboard.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -57,6 +62,7 @@
       <DependentUpon>Dashboard.cs</DependentUpon>
     </Compile>
     <Compile Include="DashboardStorage.cs" />
+    <Compile Include="DatabaseConnect.cs" />
     <Compile Include="frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -75,9 +81,13 @@
     <Compile Include="frmUser.Designer.cs">
       <DependentUpon>frmUser.cs</DependentUpon>
     </Compile>
+    <Compile Include="Generate.cs" />
+    <Compile Include="IAccount.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UserStorage.cs" />
     <EmbeddedResource Include="Classroom.resx">
       <DependentUpon>Classroom.cs</DependentUpon>
     </EmbeddedResource>
@@ -93,6 +103,12 @@
     <EmbeddedResource Include="frmUser.resx">
       <DependentUpon>frmUser.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="obj\Debug\prjPointOfSalesSystem.Classroom.resources" />
+    <EmbeddedResource Include="obj\Debug\prjPointOfSalesSystem.Dashboard.resources" />
+    <EmbeddedResource Include="obj\Debug\prjPointOfSalesSystem.frmLogin.resources" />
+    <EmbeddedResource Include="obj\Debug\prjPointOfSalesSystem.frmSplashScreen.resources" />
+    <EmbeddedResource Include="obj\Debug\prjPointOfSalesSystem.frmUser.resources" />
+    <EmbeddedResource Include="obj\Debug\prjPointOfSalesSystem.Properties.Resources.resources" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -105,11 +121,24 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
+    <Content Include="Database\ExecuteThisQuery.sql" />
+    <Content Include="Database\ExecuteThis.txt" />
+    <Content Include="obj\Debug\prjPointOfSalesSystem.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\prjPointOfSalesSystem.exe" />
+    <Content Include="obj\Debug\prjPointOfSalesSystem.pdb" />
+    <Content Include="obj\Debug\TempPE\Properties.Resources.Designer.cs.dll" />
     <Content Include="Unknown_empty.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferences.cache" />
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="obj\Debug\prjPointOfSalesSystem.csproj.GenerateResource.cache" />
+    <None Include="obj\Debug\prjPointOfSalesSystem.csprojAssemblyReference.cache" />
+    <None Include="obj\Release\prjPointOfSalesSystem.csproj.CoreCompileInputs.cache" />
+    <None Include="obj\Release\prjPointOfSalesSystem.csprojAssemblyReference.cache" />
+  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 using System.Threading;
+using System.Text.RegularExpressions;
 
 namespace prjPointOfSalesSystem
 {
@@ -20,6 +21,7 @@ namespace prjPointOfSalesSystem
 
         }
 
+        private readonly string username = "jayson", password = "deleon";
 
         private void Cancel_Click(object sender, EventArgs e) {
 
@@ -43,16 +45,49 @@ namespace prjPointOfSalesSystem
 
         }
 
+        //support validating format of the username 
+        private bool isValidUsername(string username) {
+
+            const string valid = @"^[a-zA-Z][a-zA-Z0-9_-]{5,30}$";
+            if (Regex.IsMatch(username,valid)) {
+
+                return true;
+            
+            }
+
+            return false;
+        }
+
+        //check if the user typing the username in valid format
+        private void LoginValidating(Object sender, EventArgs args) {
+
+            TextBox holder = (TextBox)sender;
+
+            if (!isValidUsername(holder.Text))
+            {
+
+                warning.Text = "Invalid format";
+                errorProvider1.SetError(warning, "Invalid Format Of Username");
+            }
+
+            if (isValidUsername(holder.Text))
+            {
+                warning.Text = "";
+                errorProvider1.Clear();
+            }
+        }
+
         private void Login_Click(object sender, EventArgs e)
         {
 
-            string username = "jayson", password = "deleon";
+
 
             //check the if the username and password are correct
-            bool CorrectLogin = ((usernameValue.Text == username) && (passwordValue.Text == password));
+            bool CorrectLogin = ( (usernameValue.Text == username) && (passwordValue.Text == password));
 
             //check if the texbox is empty
             bool IsEmpty = ((usernameValue.Text == String.Empty) || (passwordValue.Text == String.Empty ));
+
 
 
             //check if the condition meet for logging in if not
@@ -63,15 +98,15 @@ namespace prjPointOfSalesSystem
                 errorProvider1.SetError(warning,"Empty Value");
                 
 
-            } else {
-
+            }
+            else {
 
                 if (CorrectLogin)
                 {
 
                     //send username of a account to 
                     //temporary holder
-                    DashboardStorage.name = username;
+                    DashboardStorage.name = usernameValue.Text;
 
                     //run the dashboard ui
                     Thread thread = new Thread(new ThreadStart(CallDashboard));

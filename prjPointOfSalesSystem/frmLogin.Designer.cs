@@ -83,6 +83,7 @@
             this.usernameValue.Name = "usernameValue";
             this.usernameValue.Size = new System.Drawing.Size(160, 32);
             this.usernameValue.TabIndex = 3;
+            this.usernameValue.TextChanged += new System.EventHandler(this.LoginValidating);
             // 
             // passwordValue
             // 

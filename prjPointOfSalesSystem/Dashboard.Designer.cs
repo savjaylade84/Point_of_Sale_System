@@ -52,8 +52,8 @@
             this.classroomToolStripMenuItem1,
             this.attendanceToolStripMenuItem1,
             this.accountToolStripMenuItem1,
-            this.menuLogout,
-            this.registrationToolStripMenuItem});
+            this.registrationToolStripMenuItem,
+            this.menuLogout});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(1827, 28);

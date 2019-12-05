@@ -27,7 +27,7 @@ namespace prjPointOfSalesSystem
         {
 
             //call the user account
-            frmUser user = new frmUser();
+            var user = new frmUser();
             user.MdiParent = this;
             user.Show();
 
